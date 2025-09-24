@@ -10,5 +10,6 @@ public interface IParallelElevator
      /// </summary>
      /// <param name="floor">Номер этажа.</param>
      /// <param name="ct">Токен отмены.</param>
-     Task MoveAsync(int floor, CancellationToken ct);
+     /// <returns>Этаж после перемещения.</returns>
+     Task<int> MoveAsync(int floor, CancellationToken ct);
 }
